@@ -5,9 +5,11 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "week1", "week1", "{7BBC0486-D4C0-4DBA-8603-C275C8B5C6AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "datatypes-operators", "datatypes-operators-loop\datatypes-operators.csproj", "{C9048060-CCB1-4011-927D-46E02590D122}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "datatypes-operators", "datatypes-operators-loop\datatypes-operators.csproj", "{C9048060-CCB1-4011-927D-46E02590D122}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "loop", "loop\loop.csproj", "{83FAFB8F-475C-44C7-8F24-D8FE58F13287}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "loop", "loop\loop.csproj", "{83FAFB8F-475C-44C7-8F24-D8FE58F13287}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "week2", "week2", "{2CFE28D6-9FB4-48DF-A278-C6E840FF0146}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
