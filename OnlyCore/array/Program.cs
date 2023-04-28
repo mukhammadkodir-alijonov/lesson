@@ -13,7 +13,7 @@ class Program
             arr[i] = DateTime.Now.Millisecond;
             Console.WriteLine(arr[i]);
         }*/
-
+        
         // n*m matritsani random tarzda to'ldirish
         /*int[,] arr = new int[10, 10];
         Random random = new Random();
