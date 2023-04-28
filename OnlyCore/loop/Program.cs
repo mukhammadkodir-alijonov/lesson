@@ -40,7 +40,9 @@ class Program
         while (true)
         { Console.WriteLine("salom"); }
 
+#pragma warning disable CS0162 // Unreachable code detected
         string correctEmail = "alijonov@gmail.com";
+#pragma warning restore CS0162 // Unreachable code detected
         string correctPassword = "12345";
         string email = "";
         string password = "";
@@ -98,9 +100,6 @@ class Program
             goto key;
         }
         Console.ReadKey();
-
-
-
 
     }
 
