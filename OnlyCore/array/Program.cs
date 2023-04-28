@@ -5,7 +5,7 @@ class Program
 {
     public static void Main()
     {
-        /*//arry example
+        /*//arry example.
         int[] arr = new int[10];
         for (int i = 0; i < arr.Length; i++) 
         {
