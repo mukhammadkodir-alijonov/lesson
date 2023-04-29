@@ -50,7 +50,7 @@ class Program
         Console.WriteLine(Sum(3,44,4,5,6,7));
         Console.WriteLine(Sum(6,7,90,6,4,3,5));*/
 
-        // foreach
+        // foreach indekssiz ishlaydi for esa idex bln ishlaydi
         /*int[] arr = new int[] { 1, 2, 3, 5, 6, 8, 9, 11, 76,99};
         foreach (int i in arr)
         {
