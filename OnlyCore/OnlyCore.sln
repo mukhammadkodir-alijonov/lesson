@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "class_array", "class_array\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "download", "download\download.csproj", "{14C2C488-0CA0-4E31-9F44-BEA415266D05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "essential", "essential\essential.csproj", "{F0CB4CDE-5C97-4718-B2EE-25DAC86B5976}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "essential", "essential\essential.csproj", "{F0CB4CDE-5C97-4718-B2EE-25DAC86B5976}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
