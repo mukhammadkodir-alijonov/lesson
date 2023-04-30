@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "download", "download\downlo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "essential", "essential\essential.csproj", "{F0CB4CDE-5C97-4718-B2EE-25DAC86B5976}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "enum", "enum\enum.csproj", "{70F16094-3C67-44F9-BE00-7C073A454E51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{F0CB4CDE-5C97-4718-B2EE-25DAC86B5976}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0CB4CDE-5C97-4718-B2EE-25DAC86B5976}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0CB4CDE-5C97-4718-B2EE-25DAC86B5976}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70F16094-3C67-44F9-BE00-7C073A454E51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70F16094-3C67-44F9-BE00-7C073A454E51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70F16094-3C67-44F9-BE00-7C073A454E51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70F16094-3C67-44F9-BE00-7C073A454E51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +80,7 @@ Global
 		{074B511B-4D30-4E03-92F3-6C8B231C08DE} = {2CFE28D6-9FB4-48DF-A278-C6E840FF0146}
 		{14C2C488-0CA0-4E31-9F44-BEA415266D05} = {2CFE28D6-9FB4-48DF-A278-C6E840FF0146}
 		{F0CB4CDE-5C97-4718-B2EE-25DAC86B5976} = {2CFE28D6-9FB4-48DF-A278-C6E840FF0146}
+		{70F16094-3C67-44F9-BE00-7C073A454E51} = {2CFE28D6-9FB4-48DF-A278-C6E840FF0146}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {81AFB23F-2624-4124-9834-CE7361E60423}
