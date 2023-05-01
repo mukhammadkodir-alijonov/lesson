@@ -23,11 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "download", "download\downlo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "essential", "essential\essential.csproj", "{F0CB4CDE-5C97-4718-B2EE-25DAC86B5976}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "enum", "enum\enum.csproj", "{70F16094-3C67-44F9-BE00-7C073A454E51}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "week3", "week3", "{ABC1C676-4773-4ECA-B867-715C3033C4D7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "base_sealed", "oop\base_sealed.csproj", "{8CE7D02A-1C48-48FB-A04D-E949C3198768}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "enum", "enum\enum.csproj", "{70F16094-3C67-44F9-BE00-7C073A454E51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
