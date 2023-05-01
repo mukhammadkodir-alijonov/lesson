@@ -5,6 +5,7 @@
         public static void Main(string[] args)
         {
             Staff staff = new Staff("", "", "");
+            Console.WriteLine(staff.Firstname);
         }
     }
 
