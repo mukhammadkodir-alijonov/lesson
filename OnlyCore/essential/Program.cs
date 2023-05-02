@@ -48,7 +48,7 @@ namespace essential
     }
     public class Person
     {
-        public  void Shout()
+        public void Shout()
         {
             if (OperatingSystem.IsWindows())  
                 Console.Beep(1000,2000);

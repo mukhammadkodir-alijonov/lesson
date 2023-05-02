@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "enum", "enum\enum.csproj", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "week3", "week3", "{20288157-E989-4AD8-B596-88F953E9DD61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "opp", "opp\opp.csproj", "{51DA2263-EE12-4E39-AEDA-284F84982A5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "opp", "opp\opp.csproj", "{51DA2263-EE12-4E39-AEDA-284F84982A5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
