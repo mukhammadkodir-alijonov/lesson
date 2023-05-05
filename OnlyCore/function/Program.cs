@@ -1,10 +1,8 @@
-﻿using System;
-
-class Program
+﻿class Program
 {
     public static void Main()
     {
-        
+
         /*//function simple example
         int n = 100;
         for (int i = 2; i <= n; i++)

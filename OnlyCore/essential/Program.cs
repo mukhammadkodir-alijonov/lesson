@@ -1,7 +1,4 @@
-﻿using System;
-using System.Threading.Channels;
-
-namespace essential
+﻿namespace essential
 {
     public class Program
     {
@@ -50,9 +47,9 @@ namespace essential
     {
         public void Shout()
         {
-            if (OperatingSystem.IsWindows())  
-                Console.Beep(1000,2000);
-                Console.WriteLine("Person");
+            if (OperatingSystem.IsWindows())
+                Console.Beep(1000, 2000);
+            Console.WriteLine("Person");
         }
 
     }
@@ -60,9 +57,9 @@ namespace essential
     {
         public static void Shout()
         {
-            if(OperatingSystem.IsWindows())
-                Console.Beep(1000,900);
-                Console.WriteLine("Ofitsant");
+            if (OperatingSystem.IsWindows())
+                Console.Beep(1000, 900);
+            Console.WriteLine("Ofitsant");
         }
     }
     /* // destructor

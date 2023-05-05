@@ -1,6 +1,4 @@
-﻿using System;
-
-class Program
+﻿class Program
 {
     public static void Main()
     {
@@ -87,7 +85,7 @@ class Program
         }
 
         //goto leap yani sakrab o'tib ketadi 
-            bool active = false;
+        bool active = false;
         string say = "Salom";
     key:
         if (active)

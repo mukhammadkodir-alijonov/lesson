@@ -19,7 +19,7 @@ namespace download
         }
         public static void DownloadVideo(string link, string output)
         {
-            YouTube youtube = new YouTube(); 
+            YouTube youtube = new YouTube();
 
             YouTubeVideo video = youtube.GetVideo(link);
 

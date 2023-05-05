@@ -1,6 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using System.IO.Enumeration;
+﻿using System.Diagnostics;
 
 class Program
 {
@@ -16,9 +14,9 @@ class Program
 
         Console.Write("Path: ");
         string path = Console.ReadLine();
-        Run("cmd.exe",path);
+        Run("cmd.exe", path);
     }
-    public static void Run(string filename,string args)
+    public static void Run(string filename, string args)
     {
         Process process = new Process();
 

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace class_array
+﻿namespace class_array
 {
     internal class User
     {
@@ -14,7 +8,7 @@ namespace class_array
         public string Login;
         public int Age;
 
-        public User(string firstname, string lastname, int age, string email, string login) 
+        public User(string firstname, string lastname, int age, string email, string login)
         {
             this.Firstname = firstname;
             this.Lastname = lastname;
@@ -23,14 +17,14 @@ namespace class_array
             this.Login = login;
         }
 
-        public User(string firstname, string lastname,int age)
+        public User(string firstname, string lastname, int age)
         {
             this.Firstname = firstname;
             this.Lastname = lastname;
             this.Age = age;
         }
 
-        public User(string email, string login) 
+        public User(string email, string login)
         {
             this.Email = email;
             this.Login = login;

@@ -2,7 +2,7 @@
 {
     Person p = new Person { Name = "Tom" };
     p.Display();
-    p = new Employee { Name = "Sam" }; 
+    p = new Employee { Name = "Sam" };
     p.Display();
     Console.WriteLine();
 }
