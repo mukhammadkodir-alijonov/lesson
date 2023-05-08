@@ -13,7 +13,7 @@ namespace incupsulation.Models
         protected const double _childMaxDailyMoneyUsage = 50000;
         public Father(double money, string key)
         {
-            _money = money;
+            _money = money; 
             _key = key;
 
         }

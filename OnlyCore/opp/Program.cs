@@ -4,8 +4,10 @@
     {
         public static void Main(string[] args)
         {
-            Staff staff = new Staff("", "", "");
-            Console.WriteLine(staff.Firstname);
+            //Staff staff = new Staff("", "", "");
+            //Console.WriteLine(staff.Firstname);
+            Child child = new Child("salom",12);
+
         }
     }
 
@@ -41,4 +43,22 @@
             Subjects = subjects;
         }
     }*/
+}
+
+class Base
+{
+    public string Name { get; set; }
+    public Base(string name)
+    {
+        Name = name;
+    }
+}
+class Child : Base
+{
+    public int Age { get; set; }
+    public Child(string name, int age) : base(name)
+    {
+        Age = age;
+    }
+
 }
