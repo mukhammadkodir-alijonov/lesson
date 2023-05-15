@@ -53,7 +53,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "security", "security\securi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fully_list", "fully_list\fully_list.csproj", "{F734577F-06E6-4B14-99C8-7DF8314A3B36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "json", "json\json.csproj", "{CA61BCC9-FF5C-4D66-89F8-58670EDE82C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "json", "json\json.csproj", "{CA61BCC9-FF5C-4D66-89F8-58670EDE82C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "delegate", "delegate\delegate.csproj", "{9F75BE5A-03BB-4053-9EC6-F880E8D40934}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -149,6 +151,10 @@ Global
 		{CA61BCC9-FF5C-4D66-89F8-58670EDE82C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA61BCC9-FF5C-4D66-89F8-58670EDE82C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA61BCC9-FF5C-4D66-89F8-58670EDE82C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F75BE5A-03BB-4053-9EC6-F880E8D40934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F75BE5A-03BB-4053-9EC6-F880E8D40934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F75BE5A-03BB-4053-9EC6-F880E8D40934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F75BE5A-03BB-4053-9EC6-F880E8D40934}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -176,6 +182,7 @@ Global
 		{0C699C2C-B198-421D-B7B4-4A57A8F79FD5} = {E9539BBA-5E92-4841-BEB0-7079D680A729}
 		{F734577F-06E6-4B14-99C8-7DF8314A3B36} = {E9539BBA-5E92-4841-BEB0-7079D680A729}
 		{CA61BCC9-FF5C-4D66-89F8-58670EDE82C5} = {E9539BBA-5E92-4841-BEB0-7079D680A729}
+		{9F75BE5A-03BB-4053-9EC6-F880E8D40934} = {E9539BBA-5E92-4841-BEB0-7079D680A729}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {81AFB23F-2624-4124-9834-CE7361E60423}
