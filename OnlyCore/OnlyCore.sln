@@ -51,7 +51,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "list", "list\list.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "security", "security\security.csproj", "{0C699C2C-B198-421D-B7B4-4A57A8F79FD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fully_list", "fully_list\fully_list.csproj", "{F734577F-06E6-4B14-99C8-7DF8314A3B36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fully_list", "fully_list\fully_list.csproj", "{F734577F-06E6-4B14-99C8-7DF8314A3B36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "json", "json\json.csproj", "{CA61BCC9-FF5C-4D66-89F8-58670EDE82C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -143,6 +145,10 @@ Global
 		{F734577F-06E6-4B14-99C8-7DF8314A3B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F734577F-06E6-4B14-99C8-7DF8314A3B36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F734577F-06E6-4B14-99C8-7DF8314A3B36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA61BCC9-FF5C-4D66-89F8-58670EDE82C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA61BCC9-FF5C-4D66-89F8-58670EDE82C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA61BCC9-FF5C-4D66-89F8-58670EDE82C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA61BCC9-FF5C-4D66-89F8-58670EDE82C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -169,6 +175,7 @@ Global
 		{A2E13CE9-6C81-4907-AAF0-57CC4BFAE0C0} = {E9539BBA-5E92-4841-BEB0-7079D680A729}
 		{0C699C2C-B198-421D-B7B4-4A57A8F79FD5} = {E9539BBA-5E92-4841-BEB0-7079D680A729}
 		{F734577F-06E6-4B14-99C8-7DF8314A3B36} = {E9539BBA-5E92-4841-BEB0-7079D680A729}
+		{CA61BCC9-FF5C-4D66-89F8-58670EDE82C5} = {E9539BBA-5E92-4841-BEB0-7079D680A729}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {81AFB23F-2624-4124-9834-CE7361E60423}
