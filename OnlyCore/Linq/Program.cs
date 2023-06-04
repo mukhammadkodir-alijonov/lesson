@@ -34,7 +34,8 @@ public class Program
             PhoneNumber = "+99894123123234",
             CourseId = 3,
 
-        },new Student()
+        },
+        new Student()
         {
             Id =4,
             FirstName = "avaz",
@@ -76,7 +77,7 @@ public class Program
             Name = " bootcamp"
         }
 };
-    private static IList<Person> People = new List<Person>()
+    /*private static IList<Person> People = new List<Person>()
     {
         new Person()
         {
@@ -106,7 +107,7 @@ public class Program
             Job = "Scientest"
         }
 
-    };
+    };*/
     static void Main(string[] args)
     {
         /*//string[] arr = { "salom", "hayir", "muhammad", "avaz", "guli"};
@@ -356,7 +357,7 @@ public class Program
         //    Console.WriteLine(item);
         //}*/
 
-        //1-usul group va join uchun
+        /*//1-usul group va join uchun
         //var result = from student in Students
         //             join course in Courses
         //             on student.CourseId equals course.Id
@@ -375,35 +376,32 @@ public class Program
         //        Console.WriteLine(student.StudentFulName);
         //    }
         //    Console.WriteLine();
-        //}
+        //}*/
 
 
-        //2-usul group va join uchun
-        //var result = Courses.GroupJoin(Students,
-        //    course => course.Id,
-        //    student => student.Id,
-        //    (course, student) => new
-        //    {
-        //        CourseName = course.Name,
-        //        Students = student
-        //    }
-        // );
+        //2 - usul group va join uchun
+        var result = Courses.GroupJoin(Students,
+            course => course.Id,
+            student => student.Id,
+            (course, student) => new
+            {
+                CourseName = course.Name,
+                Students = student
+            }
+         );
 
-        //foreach ( var course in result )
-        //{
-        //    Console.WriteLine(course.CourseName);
-        //    foreach ( var student in course.Students)
-        //    {
-        //        Console.WriteLine("    " + student.FirstName + " " + student.LastName);
-        //    }
-        //    Console.WriteLine();
-        //}
-
-
-
+        foreach (var course in result)
+        {
+            Console.WriteLine(course.CourseName);
+            foreach (var student in course.Students)
+            {
+                Console.WriteLine("    " + student.FirstName + " " + student.LastName);
+            }
+            Console.WriteLine();
+        }
     }
 }
-public class Person
+/*public class Person
 {
     public string FirstName { get; set; } = String.Empty;
     public string LastName { get; set; } = String.Empty;
@@ -411,7 +409,7 @@ public class Person
     public int Age { get; set; }
     public string PhoneNumber { get; set; } = String.Empty;
     public string Job { get; set; } = String.Empty;  
-}
+}*/
 
 class Student
 {
