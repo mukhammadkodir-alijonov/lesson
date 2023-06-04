@@ -93,9 +93,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Linq", "Linq\Linq.csproj", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "linqhomework", "linqhomework", "{DE6762F4-785A-4EF8-91B9-10F02911B5EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homework_linq_1", "homework_linq\homework_linq_1.csproj", "{B8F43B1B-2319-4830-95E7-ED690E20D377}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "homework_linq_1", "homework_linq\homework_linq_1.csproj", "{B8F43B1B-2319-4830-95E7-ED690E20D377}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homework_linq_2", "homework_linq_2\homework_linq_2.csproj", "{E02E8DE3-998B-43CC-B906-C16E5518A234}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "homework_linq_2", "homework_linq_2\homework_linq_2.csproj", "{E02E8DE3-998B-43CC-B906-C16E5518A234}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homework_linq_3", "homework_linq_3\homework_linq_3.csproj", "{4613E083-582D-41D1-8B0A-86179AD1BFF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -247,6 +249,10 @@ Global
 		{E02E8DE3-998B-43CC-B906-C16E5518A234}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E02E8DE3-998B-43CC-B906-C16E5518A234}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E02E8DE3-998B-43CC-B906-C16E5518A234}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4613E083-582D-41D1-8B0A-86179AD1BFF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4613E083-582D-41D1-8B0A-86179AD1BFF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4613E083-582D-41D1-8B0A-86179AD1BFF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4613E083-582D-41D1-8B0A-86179AD1BFF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -294,6 +300,7 @@ Global
 		{DE6762F4-785A-4EF8-91B9-10F02911B5EC} = {298C3607-9A62-437E-980C-0FECD9E964D7}
 		{B8F43B1B-2319-4830-95E7-ED690E20D377} = {DE6762F4-785A-4EF8-91B9-10F02911B5EC}
 		{E02E8DE3-998B-43CC-B906-C16E5518A234} = {DE6762F4-785A-4EF8-91B9-10F02911B5EC}
+		{4613E083-582D-41D1-8B0A-86179AD1BFF6} = {DE6762F4-785A-4EF8-91B9-10F02911B5EC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {81AFB23F-2624-4124-9834-CE7361E60423}
