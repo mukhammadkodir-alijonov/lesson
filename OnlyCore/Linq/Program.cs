@@ -378,8 +378,7 @@ public class Program
         //    Console.WriteLine();
         //}*/
 
-
-        //2 - usul group va join uchun
+        /*//2 - usul group va join uchun
         var result = Courses.GroupJoin(Students,
             course => course.Id,
             student => student.Id,
@@ -398,7 +397,46 @@ public class Program
                 Console.WriteLine("    " + student.FirstName + " " + student.LastName);
             }
             Console.WriteLine();
+        }*/
+
+        /*// defender exacution
+         var result = (from s in Students
+                     where s.Id >= 1 && s.Id <= 3
+                     select s);
+
+        Students.Add(new Student()
+        {
+            Id = 2,
+            FirstName = "sotvoldi",
+            LastName = "Vali",
+            PhoneNumber = "+9989412312321",
+            CourseId = 1,
+        });
+        foreach (var item in result)
+        {
+            Console.WriteLine(item.FirstName);
+        }*/
+
+
+
+        //immedate exexution
+        var result = (from s in Students
+                      where s.Id >= 1 && s.Id <= 3
+                      select s).ToList();
+
+        Students.Add(new Student()
+        {
+            Id = 2,
+            FirstName = "sotvoldi",
+            LastName = "Vali",
+            PhoneNumber = "+9989412312321",
+            CourseId = 1,
+        });
+        foreach (var item in result)
+        {
+            Console.WriteLine(item.FirstName);
         }
+
     }
 }
 /*public class Person
