@@ -1,4 +1,4 @@
-﻿namespace postgreSQL_fundamentals
+﻿namespace postgreSQL
 {
     internal class Program
     {
