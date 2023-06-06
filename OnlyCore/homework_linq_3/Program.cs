@@ -78,7 +78,7 @@ public static class Program
 {
     public static void Main()
     {
-        var blogViewModels = GetBlogViewModelsWithJoin();//GetBlogViewModels();
+        List<BlogViewModel> blogViewModels = GetBlogViewModelsWithJoin();//GetBlogViewModels();
 
         foreach (var blogViewModel in blogViewModels)
         {
