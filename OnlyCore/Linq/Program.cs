@@ -427,9 +427,9 @@ public class Program
         Students.Add(new Student()
         {
             Id = 2,
-            FirstName = "sotvoldi",
-            LastName = "Vali",
-            PhoneNumber = "+9989412312321",
+            FirstName = "sotvoldii",
+            LastName = "Vali=",
+            PhoneNumber = "+998941231232112",
             CourseId = 1,
         });
         foreach (var item in result)
