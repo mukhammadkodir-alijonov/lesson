@@ -59,22 +59,22 @@ public class Program
         new Course()
         {
             Id = 1,
-            Name = ".net bootcamp"
+            Name = ".net bootcamp-"
         },
     new Course()
     {
         Id = 2,
-            Name = "Flutter bootcamp"
+            Name = "Flutter bootcamp-"
         },
     new Course()
     {
         Id = 3,
-            Name = "Java bootcamp"
+            Name = "Java bootcamp-"
         },
     new Course()
     {
         Id = 4,
-            Name = " bootcamp"
+            Name = " bootcamp-"
         }
 };
     /*private static IList<Person> People = new List<Person>()
