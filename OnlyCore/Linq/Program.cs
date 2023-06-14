@@ -11,8 +11,8 @@ public class Program
         new Student()
         {
             Id =1,
-            FirstName = "Ali",
-            LastName = "Vali",
+            FirstName = "Ali.",
+            LastName = "Vali.",
             PhoneNumber = "+9989412312321",
             CourseId = 1,
 
