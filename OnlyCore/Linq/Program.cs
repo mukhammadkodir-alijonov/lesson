@@ -69,7 +69,7 @@ public class Program
     new Course()
     {
         Id = 3,
-            Name = "Java bootcamp-"
+            Name = "Java bootcamp--"
         },
     new Course()
     {
