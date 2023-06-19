@@ -96,7 +96,7 @@ public static class Program
         }
     }
 
-    /*public static List<BlogViewModel> GetBlogViewModels()
+    public static List<BlogViewModel> GetBlogViewModels()
     {
         var blogViewModels = MockData.Blogs.Select(blog => new BlogViewModel
         {
@@ -109,7 +109,7 @@ public static class Program
         }).ToList();
 
         return blogViewModels;
-    }*/
+    }
     public static List<BlogViewModel> GetBlogViewModelsWithJoin()
     {
         var blogViewModels = MockData.Blogs.Join(

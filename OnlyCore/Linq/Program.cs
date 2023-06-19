@@ -400,9 +400,9 @@ public class Program
         }*/
 
         /*// defender exacution
-         var result = (from s in Students
-                     where s.Id >= 1 && s.Id <= 3
-                     select s);
+        var result = (from s in Students
+                      where s.Id >= 1 && s.Id <= 3
+                      select s);
 
         Students.Add(new Student()
         {
