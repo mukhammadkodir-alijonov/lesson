@@ -8,18 +8,15 @@ public class Program
     {
         string connectionString = "Host=localhost; Port=5432; Database=adonet-db; User Id=postgres; Password=alijonovm;";
 
-        string query = "SELECT * FROM users;";
+        string query = "INSERT INTO public.users(\r\n\tfull_name, email, phone_number, adress)" + 
+            "VALUES \r\n\t('Malikov Sardor', 'Malikov@gmail.com', '+998945041234', 'Jizzah vil');";
 
         NpgsqlConnection npgsqlConnection = new NpgsqlConnection(connectionString);
         npgsqlConnection.Open();
 
         NpgsqlCommand npgsqlCommand = new NpgsqlCommand(query, npgsqlConnection);
 
-        var reader = npgsqlCommand.ExecuteReader();
-
-        while (reader.Read())
-        {
-            Console.WriteLine(reader.GetString(1));
-        }
+        var result = npgsqlCommand.ExecuteNonQuery();
+        Console.WriteLine(result);
     }
 }
