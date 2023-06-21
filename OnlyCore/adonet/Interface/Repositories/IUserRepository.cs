@@ -14,4 +14,5 @@ public interface IUserRepository
     public Task<int> CreateAsync(User user);
     public Task<int> UpdateAsync(long id, User user);
     public Task<int> DeleteAsync(long id);
+    public Task<User?> FindEmailAsync(string email);
 }

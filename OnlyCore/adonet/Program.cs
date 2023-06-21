@@ -9,15 +9,12 @@ public class Program
 {
     public static async Task Main(string[] args)
     {
-        User user = new User()
-        {
-            FullName = "Sattarov Diyirbek",
-            Email = "Diyirbek@gmail.com",
-            PhoneNUmber = "+998945044556",
-            Adress = "Namangan vil"
-        };
-        IUserRepository repository = new UserRepository();
-        var result = await repository.UpdateAsync(4,user);
-        Console.WriteLine(result);
+        Console.Write("Email : ");
+        string email = Console.ReadLine();
+        Console.Write("Password : ");
+        string password = Console.ReadLine();
+        IUserRepository userRepository = new UserRepository();
+        var user = await userRepository.FindEmailAsync(email);
+        Console.WriteLine(user.FullName + " " + user.Adress);
     }
 }
