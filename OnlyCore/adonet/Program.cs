@@ -1,22 +1,23 @@
-﻿using Npgsql;
+﻿using adonet.Interface.Repositories;
+using adonet.Models;
+using adonet.Repositories571632;
+using Npgsql;
 
 namespace adonet;
 
 public class Program
 {
-    static void Main(string[] args)
+    public static async Task Main(string[] args)
     {
-        string connectionString = "Host=localhost; Port=5432; Database=adonet-db; User Id=postgres; Password=alijonovm;";
-
-        string query = "INSERT INTO public.users(\r\n\tfull_name, email, phone_number, adress)" + 
-            "VALUES \r\n\t('Malikov Sardor', 'Malikov@gmail.com', '+998945041234', 'Jizzah vil');";
-
-        NpgsqlConnection npgsqlConnection = new NpgsqlConnection(connectionString);
-        npgsqlConnection.Open();
-
-        NpgsqlCommand npgsqlCommand = new NpgsqlCommand(query, npgsqlConnection);
-
-        var result = npgsqlCommand.ExecuteNonQuery();
+        User user = new User()
+        {
+            FullName = "Sattarov Diyirbek",
+            Email = "Diyirbek@gmail.com",
+            PhoneNUmber = "+998945044556",
+            Adress = "Namangan vil"
+        };
+        IUserRepository repository = new UserRepository();
+        var result = await repository.UpdateAsync(4,user);
         Console.WriteLine(result);
     }
 }
