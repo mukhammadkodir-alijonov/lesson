@@ -3,12 +3,12 @@
     public static void Main()
     {
 
-        /*//function simple example
+        //function simple example
         int n = 100;
         for (int i = 2; i <= n; i++)
         {
             if (IsPrime(i)) Console.WriteLine(i);
-        }*/
+        }
 
 
         // ref bilan ish;ash ref kalit so'zi umimiy qiymatni tagi bln olib methodga bervorvoradi ref siz yozsak shunchaki qiymatdan copya olib bervoradi 
