@@ -7,17 +7,7 @@ class Program
     {
         AppDbContext appDbContext = new AppDbContext();
         var user = appDbContext.Users.Find((long)1);
-        Console.WriteLine(user.ToString());
-        /*User user = new User()
-        {
-            Firstname = "Sardor",
-            Lastname = "Malikov",
-            PhoneNumber = "+9989920023423",
-            Address = "Andijon vil, Toraqo'rg'on tumani"
-        };
-
-        AppDbContext dbContext = new AppDbContext();
-        dbContext.Users.Add(user);
-        dbContext.SaveChanges();*/
+        user.Lastname = "Muhammad";
+        appDbContext.SaveChanges();
     }
 }
