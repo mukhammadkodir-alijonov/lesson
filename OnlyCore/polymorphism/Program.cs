@@ -1,4 +1,5 @@
-﻿/* //overload 
+﻿
+//overload 
 class Program
 {
     static void Main()
@@ -12,7 +13,7 @@ class Program
         Console.WriteLine(Max(4.7, 3.3, 48.0));
         Console.WriteLine(Max(arr));
     }
-    static double Max(double number1,double number2)
+    static double Max(double number1, double number2)
     {
         return (number1 > number2) ? number1 : number2;
     }
@@ -36,7 +37,7 @@ class Program
         }
         else return -1;
     }
-}*/
+}
 /*//override
 namespace ConsoleApp1
 {

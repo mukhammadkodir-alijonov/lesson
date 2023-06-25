@@ -7,7 +7,7 @@
         int n = 100;
         for (int i = 2; i <= n; i++)
         {
-            if (IsPrime(i)) Console.WriteLine(i);
+            //if (IsPrime(i)) Console.WriteLine(i);
         }
 
 
