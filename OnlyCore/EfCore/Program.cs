@@ -7,7 +7,8 @@ class Program
     {
         AppDbContext appDbContext = new AppDbContext();
         var user = appDbContext.Users.Find((long)1);
-        user.Lastname = "Muhammad";
+        if(user is not null) appDbContext.Users.Remove(user);
         appDbContext.SaveChanges();
+        
     }
 }
