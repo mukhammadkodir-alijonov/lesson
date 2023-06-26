@@ -6,9 +6,15 @@ class Program
     public static void Main(string[] args)
     {
         AppDbContext appDbContext = new AppDbContext();
-        var user = appDbContext.Users.Find((long)1);
-        if(user is not null) appDbContext.Users.Remove(user);
-        appDbContext.SaveChanges();
-        
+        var user = new User()
+        {
+            Firstname = "Sotvoldi",
+            Lastname = "alimov",
+            Address = "namagna",
+            PhoneNumber = "+998945678822"
+        };
+        appDbContext.Users.Add(user);
+        var result = appDbContext.SaveChanges();
+        Console.WriteLine(result);
     }
 }
