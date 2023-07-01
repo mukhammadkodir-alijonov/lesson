@@ -43,7 +43,7 @@ namespace asp_net_web_api.Controllers
             }
         };
         [HttpGet]
-        public List<User> GetUsers()
+        public List<User> GetUser()
         {
             return listUser;
         }
