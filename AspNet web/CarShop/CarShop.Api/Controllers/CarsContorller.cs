@@ -90,9 +90,9 @@ namespace CarShop.Api.Controllers
             {
                 return NotFound(exception.Message);
             }
-            catch(Exception error)
+            catch
             {
-                return StatusCode(500, error.Message);
+                return StatusCode(500);
             }
         }
     }
