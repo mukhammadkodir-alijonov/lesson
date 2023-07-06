@@ -7,15 +7,11 @@
         int i = 5;
         int n = int.Parse(Console.ReadLine());
         Console.WriteLine((n > i) ? "katta" : "kichik");
-
-
         // 1.2 ?
         int f = 5;
         int p = int.Parse(Console.ReadLine());
         Console.WriteLine((p >= i) ? ((p == 1) ? "teng" : "katta") : "kichik");
         Main();
-
-
         // math
         double j = 1.2;
         double target = Math.Round(j);// yaxlitlaydi
