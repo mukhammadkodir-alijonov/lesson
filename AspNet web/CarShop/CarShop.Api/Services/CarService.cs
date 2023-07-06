@@ -1,19 +1,18 @@
 ﻿using CarShop.Api.DbContexts;
+using CarShop.Api.Dtos.Cars;
 using CarShop.Api.Exceptions;
 using CarShop.Api.Interfaces;
 using CarShop.Api.Models;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System;
 
 namespace CarShop.Api.Services
 {
     public class CarService : ICarService
     {
         private readonly AppDbContext appDbContext;
-        public CarService()
+        public CarService(AppDbContext appDbContext)
         {
-            appDbContext = new AppDbContext();
+            this.appDbContext = appDbContext;
         }
         public async Task<IEnumerable<Car>> GetAllAsync()
         {
@@ -24,11 +23,12 @@ namespace CarShop.Api.Services
         {
             var result = await appDbContext.Cars.FindAsync(id);
             if (result is not null) throw new NotFoundException("Car Not Found");
-            else return result;
+            else return result!;
         }
-        public async Task<bool> CreateAsync(Car obj)
+        public async Task<bool> CreateAsync(CarCreateDto dto)
         {
-            appDbContext.Cars.Add(obj);
+            var entity = (Car)dto;
+            appDbContext.Cars.Add(dto);
             var result = await appDbContext.SaveChangesAsync();
             return result > 0;
         }

@@ -1,7 +1,7 @@
-﻿using CarShop.Api.Exceptions;
+﻿using CarShop.Api.Dtos.Cars;
+using CarShop.Api.Exceptions;
 using CarShop.Api.Interfaces;
 using CarShop.Api.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarShop.Api.Controllers
@@ -48,11 +48,11 @@ namespace CarShop.Api.Controllers
             }
         }
         [HttpPost]
-        public async Task<IActionResult> CreateAsync([FromBody] Car obj)
+        public async Task<IActionResult> CreateAsync([FromForm] CarCreateDto dto)
         {
             try
             {
-                var result = await _carService.CreateAsync(obj);
+                var result = await _carService.CreateAsync(dto);
                 if (result) return Ok();
                 else return BadRequest();
             }
@@ -83,7 +83,7 @@ namespace CarShop.Api.Controllers
         {
             try
             {
-                var result = await _carService.UpdateAsync(obj,id);
+                var result = await _carService.UpdateAsync(obj, id);
                 return Ok(result);
             }
             catch (NotFoundException exception)

@@ -3,13 +3,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CarShop.Api.DbContexts
 {
-    public class AppDbContext: DbContext
+    public class AppDbContext : DbContext
     {
-        public virtual DbSet<Car> Cars { get; set; } = default!;
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public AppDbContext(DbContextOptions<AppDbContext> options)
+            : base(options)
         {
-            string connectionString = "Host=localhost; Port=5432; Database=carshop-db; User Id=postgres; Password=alijonovm;";
-            optionsBuilder.UseNpgsql(connectionString);
+
         }
+        public virtual DbSet<Car> Cars { get; set; } = default!;
+        public virtual DbSet<User> Users { get; set; } = default!;
     }
 }
