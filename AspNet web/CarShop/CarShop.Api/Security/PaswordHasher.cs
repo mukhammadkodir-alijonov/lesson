@@ -9,13 +9,13 @@ namespace CarShop.Api.Security
             string paswordHash = BCrypt.Net.BCrypt.HashPassword(password + salt);
             return (PasswordHash: paswordHash, Salt: salt);
         }
-        public static bool Verify(string passowrd, string salt, string passwordHash)
+        /*public static bool Verify(string passowrd, string salt, string passwordHash)
         {
             return BCrypt.Net.BCrypt.Verify(passowrd + salt, passwordHash);
         }
         public static string GenerateSalt()
         {
             return Guid.NewGuid().ToString();
-        }
+        }*/
     }
 }
