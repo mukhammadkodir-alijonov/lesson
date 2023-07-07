@@ -1,3 +1,4 @@
+using CarShop.Api.Configurations;
 using CarShop.Api.DbContexts;
 using CarShop.Api.Interfaces;
 using CarShop.Api.Services;
@@ -15,6 +16,9 @@ builder.Services.AddScoped<IAccountService, AccountService>();
 //-> database
 string? connectionString = builder.Configuration.GetConnectionString("database");
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));
+
+//Logger
+builder.ConfigurationLogger();
 
 //-> Middlewares
 var app = builder.Build();

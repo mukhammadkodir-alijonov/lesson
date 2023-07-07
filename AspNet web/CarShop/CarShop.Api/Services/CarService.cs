@@ -24,7 +24,7 @@ namespace CarShop.Api.Services
             var result = await appDbContext.Cars.FindAsync(id);
             if (result is not null) throw new NotFoundException("Car Not Found");
             else return result!;
-            if (result is not null) throw new NotFoundException("Car not found!");
+            if(result is not null) throw new NotFoundException("Car not found!");
             else return result;
         }
         public async Task<bool> CreateAsync(CarCreateDto dto)
