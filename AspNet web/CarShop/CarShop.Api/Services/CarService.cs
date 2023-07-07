@@ -16,7 +16,7 @@ namespace CarShop.Api.Services
         }
         public async Task<IEnumerable<Car>> GetAllAsync()
         {
-            return await appDbContext.Cars.AsNoTracking()
+            return await appDbContext.Cars.OrderBy(x=>x.Id).AsNoTracking()
                   .ToListAsync();
         }
         public async Task<Car> GetAsync(long id)
@@ -24,7 +24,7 @@ namespace CarShop.Api.Services
             var result = await appDbContext.Cars.FindAsync(id);
             if (result is not null) throw new NotFoundException("Car Not Found");
             else return result!;
-            if(result is not null) throw new NotFoundException("Car not found!");
+            if (result is not null) throw new NotFoundException("Car not found!");
             else return result;
         }
         public async Task<bool> CreateAsync(CarCreateDto dto)
@@ -48,9 +48,9 @@ namespace CarShop.Api.Services
         public async Task<bool> UpdateAsync(Car obj, long id)
         {
             var entity = await appDbContext.Cars.FindAsync(id);
-            appDbContext.Entry<Car>(entity!).State = EntityState.Detached;
             if (entity is not null)
             {
+                appDbContext.Entry<Car>(entity!).State = EntityState.Detached;
                 obj.Id = id;
                 appDbContext.Cars.Update(obj);
                 var result = await appDbContext.SaveChangesAsync();

@@ -81,19 +81,19 @@ namespace CarShop.Api.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateByIdAsync(long id, [FromBody] Car obj)
         {
-            try
-            {
+            //try
+            //{
                 var result = await _carService.UpdateAsync(obj, id);
                 return Ok(result);
-            }
-            catch (NotFoundException exception)
-            {
-                return NotFound(exception.Message);
-            }
-            catch
-            {
-                return StatusCode(500);
-            }
+            //}
+            //catch (NotFoundException exception)
+            //{
+            //    return NotFound(exception.Message);
+            //}
+            //catch
+            //{
+            //    return StatusCode(500);
+            //}
         }
     }
 }
