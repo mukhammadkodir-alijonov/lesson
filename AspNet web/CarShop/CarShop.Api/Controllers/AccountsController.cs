@@ -1,23 +1,26 @@
 ﻿using CarShop.Api.Dtos.Accounts;
 using CarShop.Api.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarShop.Api.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    [Route("api/accounts")]
+    [ApiController, AllowAnonymous]
     public class AccountsController : ControllerBase
     {
-        private readonly IAccountService _accounService;
-
+        private readonly IAccountService _accountService;
         public AccountsController(IAccountService accountService)
         {
-            this._accounService = accountService;
+            this._accountService = accountService;
         }
+
         [HttpPost("register")]
         public async Task<IActionResult> RegisterAsync([FromForm] AccountRegisterDto dto)
-        {
-            return Ok(await _accounService.RegisterAsync(dto));
-        }
+            => Ok(await _accountService.RegisterAsync(dto));
+
+        [HttpPost("login")]
+        public async Task<IActionResult> LoginAsync([FromForm] AccountLoginDto dto)
+            => Ok(new { Token = await _accountService.LoginAsync(dto) });
     }
 }

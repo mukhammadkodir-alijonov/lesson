@@ -1,7 +1,5 @@
-﻿using CarShop.Api.Common.Enums;
-
-namespace CarShop.Api.Models;
-public class User
+﻿namespace CarShop.Api.Dtos.Users;
+public class OwnerDto
 {
     public long Id { get; set; }
 
@@ -12,10 +10,4 @@ public class User
     public string Email { get; set; } = String.Empty;
 
     public string ImagePath { get; set; } = String.Empty;
-
-    public string PasswordHash { get; set; } = String.Empty;
-
-    public string Salt { get; set; } = String.Empty;
-
-    public UserRole Role { get; set; } = UserRole.User;
 }

@@ -1,9 +1,15 @@
-using CarShop.Api.Configurations;
-using CarShop.Api.DbContexts;
+global using System.Net;
+using CarShop.Api.Common.Configurations;
+using CarShop.Api.Common.DbContexts;
+using CarShop.Api.Common.Middlewares;
+using CarShop.Api.Common.Security;
 using CarShop.Api.Interfaces;
+using CarShop.Api.Middlewares;
 using CarShop.Api.Services;
+using CarShop.Api.Servicese;
 using Microsoft.EntityFrameworkCore;
-//-> Service
+
+//-> Services
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -12,27 +18,32 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ICarService, CarService>();
 builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
-
-//-> database
-string? connectionString = builder.Configuration.GetConnectionString("database");
+builder.Services.AddScoped<IAuthManager, AuthManager>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+builder.ConfigureAuth();
+builder.Services.ConfigureSwaggerAuthorize();
+//database
+string connectionString = builder.Configuration.GetConnectionString("database")!;
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));
 
-//Logger
-builder.ConfigurationLogger();
+// Mapper
+//builder.Services.AddAutoMapper(typeof(MapperConfiguration));
+
+// Logger
+builder.ConfigureLogger();
 
 //-> Middlewares
 var app = builder.Build();
+app.UseMiddleware<ExceptionHandlerMiddleware>();
 app.UseStaticFiles();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

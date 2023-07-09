@@ -1,4 +1,4 @@
-﻿namespace CarShop.Api.Exceptions
+﻿namespace CarShop.Api.Common.Exceptions
 {
     public class NotFoundException : Exception
     {

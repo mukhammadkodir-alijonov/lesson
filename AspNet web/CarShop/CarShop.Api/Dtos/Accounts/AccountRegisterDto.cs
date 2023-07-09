@@ -1,33 +1,30 @@
 ﻿using CarShop.Api.Models;
 using System.ComponentModel.DataAnnotations;
 
-namespace CarShop.Api.Dtos.Accounts
+namespace CarShop.Api.Dtos.Accounts;
+public class AccountRegisterDto
 {
-    public class AccountRegisterDto
+    [Required, MaxLength(30), MinLength(2)]
+    public string FirstName { get; set; } = String.Empty;
+
+    [Required, MaxLength(30), MinLength(2)]
+    public string LastName { get; set; } = String.Empty;
+
+    [Required, MaxLength(30), MinLength(2), EmailAddress]
+    public string Email { get; set; } = String.Empty;
+
+    public IFormFile? Image { get; set; }
+
+    [Required, MinLength(8)]
+    public string Password { get; set; } = String.Empty;
+
+    public static implicit operator User(AccountRegisterDto dto)
     {
-        [Required, MaxLength(30), MinLength(2)]
-        public string FirstName { get; set; } = string.Empty;
-
-        [Required, MaxLength(30), MinLength(2)]
-        public string LastName { get; set; } = string.Empty;
-
-        [Required, MaxLength(30), MinLength(2), EmailAddress]
-        public string Email { get; set; } = string.Empty;
-
-        [Required]
-        public IFormFile Image { get; set; }
-
-        [Required, MinLength(8)]
-        public string Password { get; set; } = string.Empty;
-
-        public static implicit operator User(AccountRegisterDto dto)
+        return new User()
         {
-            return new User()
-            {
-                Email = dto.Email,
-                FirstName = dto.FirstName,
-                LastName = dto.LastName
-            };
-        }
+            Email = dto.Email,
+            FirstName = dto.FirstName,
+            LastName = dto.LastName,
+        };
     }
 }
