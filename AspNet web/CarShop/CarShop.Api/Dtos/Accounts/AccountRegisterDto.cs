@@ -4,13 +4,13 @@ using System.ComponentModel.DataAnnotations;
 namespace CarShop.Api.Dtos.Accounts;
 public class AccountRegisterDto
 {
-    [Required, MaxLength(30), MinLength(2)]
+    [Required, MaxLength(30), MinLength(6)]
     public string FirstName { get; set; } = String.Empty;
 
-    [Required, MaxLength(30), MinLength(2)]
+    [Required, MaxLength(30), MinLength(6)]
     public string LastName { get; set; } = String.Empty;
 
-    [Required, MaxLength(30), MinLength(2), EmailAddress]
+    [Required, MaxLength(30), MinLength(6), EmailAddress]
     public string Email { get; set; } = String.Empty;
 
     public IFormFile? Image { get; set; }
