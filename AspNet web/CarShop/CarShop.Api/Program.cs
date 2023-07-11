@@ -35,7 +35,7 @@ builder.ConfigureLogger();
 //-> Middlewares
 var app = builder.Build();
 app.UseMiddleware<ExceptionHandlerMiddleware>();
-app.UseStaticFiles();
+//app.UseStaticFiles();
 
 if (app.Environment.IsDevelopment())
 {
