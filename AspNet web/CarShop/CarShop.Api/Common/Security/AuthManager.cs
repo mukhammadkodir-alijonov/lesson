@@ -27,7 +27,7 @@ public class AuthManager : IAuthManager
         var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["SecretKey"]!));
         var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
 
-        var tokenDescriptor = new JwtSecurityToken(_config["Issuer"], _config["Audience"], claims,
+        var tokenDescriptor = new JwtSecurityToken(_config ["Issuer"], _config["Audience"], claims,
             expires: DateTime.Now.AddMinutes(double.Parse(_config["Lifetime"]!)),
             signingCredentials: credentials);
 
@@ -35,3 +35,4 @@ public class AuthManager : IAuthManager
 
     }
 }
+ 
