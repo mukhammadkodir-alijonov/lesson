@@ -21,7 +21,7 @@ builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IAuthManager, AuthManager>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.ConfigureAuth();
-builder.Services.ConfigureSwaggerAuthorize();
+builder.Services.ConfigureSwaggerAuthorize(); //for swagger Auth
 //database
 string connectionString = builder.Configuration.GetConnectionString("database")!;
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));
@@ -43,7 +43,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 app.UseHttpsRedirection();
-app.UseAuthentication();
-app.UseAuthorization();
+app.UseAuthentication(); //1
+app.UseAuthorization(); //2
 app.MapControllers();
 app.Run();
