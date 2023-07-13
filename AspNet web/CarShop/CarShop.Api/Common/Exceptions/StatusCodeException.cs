@@ -1,6 +1,4 @@
-﻿using System.Net;
-
-namespace CarShop.Api.Common.Exceptions;
+﻿namespace CarShop.Api.Common.Exceptions;
 public class StatusCodeException : Exception
 {
     public HttpStatusCode StatusCode { get; set; }

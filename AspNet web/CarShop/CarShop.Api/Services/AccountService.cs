@@ -5,7 +5,6 @@ using CarShop.Api.Dtos.Accounts;
 using CarShop.Api.Interfaces;
 using CarShop.Api.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Net;
 
 namespace CarShop.Api.Services;
 public class AccountService : IAccountService

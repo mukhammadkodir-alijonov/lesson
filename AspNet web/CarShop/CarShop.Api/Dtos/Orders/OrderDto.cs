@@ -1,5 +1,4 @@
-﻿using CarShop.Api.Common.Enums;
-using CarShop.Api.Dtos.Users;
+﻿using CarShop.Api.Dtos.Users;
 using CarShop.Api.Models;
 
 namespace CarShop.Api.Dtos.Orders;

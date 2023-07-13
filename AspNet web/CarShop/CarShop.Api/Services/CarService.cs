@@ -4,7 +4,6 @@ using CarShop.Api.Dtos.Cars;
 using CarShop.Api.Interfaces;
 using CarShop.Api.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Net;
 
 namespace CarShop.Api.Services;
 public class CarService : ICarService

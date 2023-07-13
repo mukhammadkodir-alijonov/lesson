@@ -7,7 +7,6 @@ using CarShop.Api.Dtos.Orders;
 using CarShop.Api.Interfaces;
 using CarShop.Api.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Net;
 
 namespace CarShop.Api.Services;
 public class OrderService : IOrderService
