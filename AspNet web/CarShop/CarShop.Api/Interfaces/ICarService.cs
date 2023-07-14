@@ -1,10 +1,11 @@
-﻿using CarShop.Api.Dtos.Cars;
+﻿using CarShop.Api.Common.Utils;
+using CarShop.Api.Dtos.Cars;
 using CarShop.Api.Models;
 
 namespace CarShop.Api.Interfaces;
 public interface ICarService
 {
-    public Task<IEnumerable<Car>> GetAllAsync();
+    public Task<IEnumerable<Car>> GetAllAsync(PaginationParams @params);
 
     public Task<Car> GetAsync(long id);
 

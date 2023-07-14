@@ -1,7 +1,9 @@
 ﻿using CarShop.Api.Common.DbContexts;
 using CarShop.Api.Common.Exceptions;
+using CarShop.Api.Common.Utils;
 using CarShop.Api.Dtos.Cars;
 using CarShop.Api.Interfaces;
+using CarShop.Api.Interfaces.Common;
 using CarShop.Api.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,9 +11,12 @@ namespace CarShop.Api.Services;
 public class CarService : ICarService
 {
     private readonly AppDbContext appDbContext;
-    public CarService(AppDbContext appDbContext)
+    private readonly IPaginationService _paginationSerive;
+
+    public CarService(AppDbContext appDbContext, IPaginationService paginationService)
     {
         this.appDbContext = appDbContext;
+        this._paginationSerive = paginationService;
     }
 
     public async Task<bool> CreateAsync(CarCreateDto dto)
@@ -34,13 +39,13 @@ public class CarService : ICarService
         else throw new StatusCodeException(HttpStatusCode.NotFound, "Car not found");
     }
 
-    public async Task<IEnumerable<Car>> GetAllAsync()
+    public async Task<IEnumerable<Car>> GetAllAsync(PaginationParams @params)
     {
-        var query = appDbContext.Cars.OrderBy(x => x.Id);
+        var query = appDbContext.Cars.OrderBy(x => x.Id)
+            .ThenByDescending(x => x.Price)
+            .AsNoTracking();
 
-        return await query.ThenByDescending(x => x.Price)
-            .AsNoTracking()
-            .ToListAsync();
+        return  await _paginationSerive.ToPagedAsync(query, @params.PageNumber, @params.PageSize);
     }
 
     public async Task<Car> GetAsync(long id)

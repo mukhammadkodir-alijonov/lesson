@@ -1,4 +1,5 @@
-﻿using CarShop.Api.Dtos.Cars;
+﻿using CarShop.Api.Common.Utils;
+using CarShop.Api.Dtos.Cars;
 using CarShop.Api.Interfaces;
 using CarShop.Api.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -11,14 +12,15 @@ namespace CarShop.Api.Controllers
     public class CarsController : ControllerBase
     {
         private readonly ICarService _carService;
+        private readonly int pageSize = 30;
         public CarsController(ICarService carService)
         {
             this._carService = carService;
         }
 
         [HttpGet, AllowAnonymous]
-        public async Task<IActionResult> GetAllAsync()
-            => Ok(await _carService.GetAllAsync());
+        public async Task<IActionResult> GetAllAsync(int page)
+            => Ok(await _carService.GetAllAsync(new PaginationParams(page, pageSize)));
 
         [HttpGet("{id}"), Authorize(Roles = "Admin, User")]
         public async Task<IActionResult> GetByIdAsync(long id)

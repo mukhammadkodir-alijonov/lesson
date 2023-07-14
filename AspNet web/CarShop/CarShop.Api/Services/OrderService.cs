@@ -5,6 +5,7 @@ using CarShop.Api.Common.Helpers;
 using CarShop.Api.Common.Utils;
 using CarShop.Api.Dtos.Orders;
 using CarShop.Api.Interfaces;
+using CarShop.Api.Interfaces.Common;
 using CarShop.Api.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,10 +14,13 @@ public class OrderService : IOrderService
 {
     private readonly IMapper _mapper;
     private readonly AppDbContext _repository;
-    public OrderService(IMapper mapper, AppDbContext appDbContext)
+    private readonly IPaginationService _paginationService;
+
+    public OrderService(IMapper mapper, AppDbContext appDbContext, IPaginationService paginationService)
     {
         this._mapper = mapper;
         this._repository = appDbContext;
+        this._paginationService = paginationService;
     }
 
     public async Task<bool> CreateAsync(OrderCreateDto orderCreateDto)
@@ -51,8 +55,7 @@ public class OrderService : IOrderService
                     orderby order.OrderedAt
                     select _mapper.Map<OrderDto>(order);
 
-        return await query.Skip((@params.PageNumber - 1) * @params.PageSize).Take(@params.PageSize)
-                     .ToListAsync();
+        return await _paginationService.ToPagedAsync(query, @params.PageNumber, @params.PageNumber);
     }
 
     public async Task<OrderDto> GetByIdAsync(long id)

@@ -22,8 +22,8 @@ namespace CarShop.Api.Controllers
             => Ok(await _orderService.CreateAsync(orderCreateDto));
 
         [HttpGet]
-        public async Task<IActionResult> GetAllAsync([FromQuery] PaginationParams @params)
-            => Ok(await _orderService.GetAllAsync(@params));
+        public async Task<IActionResult> GetAllAsync([FromQuery] int page =1)
+            => Ok(await _orderService.GetAllAsync(new PaginationParams(page)));
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetByIdAsync(long id)

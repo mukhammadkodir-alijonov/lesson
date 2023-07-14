@@ -22,14 +22,16 @@ namespace CarShop.Api.Services
                 PageSize = pageSize,
                 TotalItems = totalItems,
                 TotalPages = (int)Math.Ceiling((double)totalItems / (double)pageSize),
-                //HasPrevious = pageNumber > 1
+                HasPrevious = pageNumber > 1
             };
             paginationMetaData.HasNext = paginationMetaData.CurrentPage < paginationMetaData.TotalPages;
             string json = JsonConvert.SerializeObject(paginationMetaData);
             _accessor.HttpContext!.Response.Headers.Add("X-Pagination", json);
             int skipCount = (pageNumber - 1) * pageSize;
             int takeCount = pageSize;
-            return await items.Skip(skipCount).Take(takeCount).ToListAsync();
+            return await items.Skip(skipCount)
+                              .Take(takeCount)
+                              .ToListAsync();
         }
     }
 }

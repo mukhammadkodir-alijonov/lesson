@@ -29,7 +29,7 @@ string connectionString = builder.Configuration.GetConnectionString("database")!
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));
 
 // Mapper
-//builder.Services.AddAutoMapper(typeof(MapperConfiguration));
+builder.Services.AddAutoMapper(typeof(MapperConfiguration));
 
 // Logger
 builder.ConfigureLogger();
