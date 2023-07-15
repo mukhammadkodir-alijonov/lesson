@@ -23,7 +23,6 @@ namespace CarShop.Api.Services
                 TotalItems = totalItems,
                 TotalPages = (int)Math.Ceiling((double)totalItems / (double)pageSize),
                 HasPrevious = pageNumber > 1
-                HasPrevious = pageNumber > 1 
             };
             paginationMetaData.HasNext = paginationMetaData.CurrentPage < paginationMetaData.TotalPages;//this is error
             string json = JsonConvert.SerializeObject(paginationMetaData);
