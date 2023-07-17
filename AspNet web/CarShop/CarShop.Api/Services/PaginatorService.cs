@@ -31,7 +31,7 @@ namespace CarShop.Api.Services
             int takeCount = pageSize;// We can use without this code:ex: like takeCount =4;
             return await items.Skip(skipCount)
                               .Take(takeCount)
-                              .ToListAsync();
+                              .ToListAsync(); // coz, finished process returns liek List(Async) 
         }
     }
 }
