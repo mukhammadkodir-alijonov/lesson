@@ -27,7 +27,7 @@ namespace CarShop.Api.Services
             paginationMetaData.HasNext = paginationMetaData.CurrentPage < paginationMetaData.TotalPages;//this is error
             string json = JsonConvert.SerializeObject(paginationMetaData);
             _accessor.HttpContext!.Response.Headers.Add("X-Pagination", json);
-            int skipCount = (pageNumber - 1) * pageSize;
+            int skipCount = (pageNumber - 1) * pageSize;// We can use without this code:ex: like skipCount =1;
             int takeCount = pageSize;
             return await items.Skip(skipCount)
                               .Take(takeCount)
