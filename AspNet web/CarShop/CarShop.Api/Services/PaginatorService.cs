@@ -28,7 +28,7 @@ namespace CarShop.Api.Services
             string json = JsonConvert.SerializeObject(paginationMetaData);
             _accessor.HttpContext!.Response.Headers.Add("X-Pagination", json);
             int skipCount = (pageNumber - 1) * pageSize;// We can use without this code:ex: like skipCount =1;
-            int takeCount = pageSize;
+            int takeCount = pageSize;// We can use without this code:ex: like takeCount =4;
             return await items.Skip(skipCount)
                               .Take(takeCount)
                               .ToListAsync();
