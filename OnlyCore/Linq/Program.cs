@@ -54,7 +54,7 @@ public class Program
 
         }
     };
-    private static IList<Course> Courses = new List<Course>()
+   /* private static IList<Course> Courses = new List<Course>()
     {
         new Course()
         {
@@ -76,7 +76,7 @@ public class Program
         Id = 4,
             Name = " bootcamp-"
         }
-};
+};*/
     /*private static IList<Person> People = new List<Person>()
     {
         new Person()
